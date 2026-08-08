@@ -1,0 +1,125 @@
+{
+  "name": "My  First Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "models/gemini-3-flash-preview"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ $json.chatInput }}"
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        224,
+        0
+      ],
+      "id": "f5f7b28a-7b6c-4e78-882b-396dbbcbb737",
+      "name": "Message a model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "YXhlrdNVI5rzo4nQ",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "da242a00-7233-4768-9a71-542c030f0708",
+              "name": "Google Gemini Response",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "abde028f-05f6-4f53-8899-76ab41a7bab6",
+              "name": "=content",
+              "value": "={{ $json.content }}",
+              "type": "object"
+            },
+            {
+              "id": "a5de6e26-c632-4a0b-b249-f2411d4abd6c",
+              "name": "content",
+              "value": "={{ $json.content }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        464,
+        0
+      ],
+      "id": "738d2f2f-9253-4ed1-90fc-c37c91494a66",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        64,
+        0
+      ],
+      "id": "ebd9bf68-3aba-4f7c-ac5d-4e6af565cdc0",
+      "name": "When chat message received",
+      "webhookId": "2b760918-e71d-47ff-8e04-83431450da61"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "e0eed4ba-01a3-4ee6-ac4e-31227f4e76c6",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ffedcca380aabe2904406e7bc9ced5889cb806df3306cc53e46dff17481a02e"
+  },
+  "nodeGroups": [],
+  "id": "cOvkaTeL4R6M7AGQ",
+  "tags": []
+}
