@@ -47,8 +47,8 @@ Text Classifier ──── "Other" ────▶ No Operation, do nothing
 
 ## ⚙️ Setup
 
-1. Import 06_Customer_Support_workflow.json into n8n (**⋯ menu → Import from File**).
-2. Reconnect credentials (these do **not** transfer between n8n instances):
+1. Make 06_Customer_Support_workflow.json into n8n 
+2. Connect credentials 
    - Gmail OAuth2
    - OpenAI API
    - Pinecone API
