@@ -70,17 +70,7 @@ The workflow correctly classified it as **customer support**, retrieved context,
 
 > *"I'm really sorry to hear that your product arrived damaged! 😢 We definitely want to get this sorted out for you as soon as possible. To request a replacement, please follow these simple steps: 1. Contact Us: Reply to this email with your order number and a brief description of the damage. 2. Return the Item: We'll provide you with a return shipping label to send back the damaged product. 3. Receive Your Replacement: Once we receive the damaged item, we'll ship out your replacement right away! Thank you for your understanding, and we're here to help every step of the way!"*
 
-**End-to-end run — email classified, AI Agent generated the reply, and Gmail sent it successfully (all green checkmarks):**
 
-![Auto-reply success](screenshots/auto-reply-success.png)
-
-**Earlier test — full workflow execution with all nodes passing:**
-
-![Workflow run success](screenshots/workflow-run-success.png)
-
-**AI Agent output for an earlier test email:**
-
-![AI Agent test output](screenshots/ai-agent-test-output.png)
 
 ---
 
