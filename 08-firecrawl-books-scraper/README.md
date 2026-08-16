@@ -31,10 +31,10 @@ This "submit a job, poll until it's done" pattern isn't unique to Firecrawl — 
 ## 🖼️ Screenshots
 
 **Workflow canvas after a successful run:**
-![Workflow diagram](screenshots/workflow-diagram.png)
+![Workflow diagram](workflow-diagram.png)
 
 **Final aggregated output (book titles + prices):**
-![Aggregate node output](screenshots/aggregate-output.png)
+![Aggregate node output](aggregate-output.png)
 
 ---
 
