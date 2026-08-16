@@ -89,6 +89,3 @@ And update the `If` condition and `Aggregate` field name to match your new field
 
 ---
 
-## 🙏 Credit
-
-Built while following [Nate Herk's n8n AI Agents course](https://www.youtube.com/@nateherk) — adapted here with a different target site and my own notes for future reference.
